@@ -48,15 +48,14 @@ function addTooltip() {
 				
 				// Try fetching the data from the INL LexiconService with an AJAX request
 				$.ajax({
-					// We do this via a CORS proxy, as the server has no 'Access-Control-Allow-Origin' setting
-					url: 'http://www.corsproxy.com/sk.taalbanknederlands.inl.nl/LexiconService/lexicon/get_lemma',
+					url: 'http://lexiconservice.inl.nl/lexicon/get_lemma',
 					dataType: 'json',
 					data: {
 						database: 'lexicon_service_db',
 						wordform: word,
 						//pos: 'NOU',
-						year_from: 1900,
-						year_to: 1800,
+						//year_from: 1800,
+						//year_to: 1900,
 					}, 
 				})
 				.then(function (response) {

@@ -3,10 +3,11 @@
 
 import requests
 
-BASE_URL = 'http://sk.taalbanknederlands.inl.nl/LexiconService/lexicon/'
+BASE_URL = 'http://lexiconservice.inl.nl/lexicon/'
 LEMMA_URL = 'get_lemma'
 WORDFORM_URL = 'get_wordforms'
 EXPAND_URL = 'expand'
+
 
 def find_lemma(wordform):
     print '====='
@@ -25,7 +26,8 @@ def find_lemma(wordform):
 
     for j in r.json()['lemmata_list']:
         for l in j['found_lemmata']:
-            print l['lemma'] + ' - ' + l['pos'] + ', ', 
+            print l['lemma'] + ' - ' + l['pos'] + ', ',
+
 
 def find_wordform(lemma):
     print ''
@@ -45,6 +47,7 @@ def find_wordform(lemma):
 
     for j in r.json()['wordforms_list']:
         print ', '.join(j['found_wordforms'])
+
 
 def expand(wordform):
     print '====='
