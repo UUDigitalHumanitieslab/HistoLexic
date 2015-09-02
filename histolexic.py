@@ -25,8 +25,7 @@ def find_lemma(wordform):
     print 'lemmata: '
 
     for j in r.json()['lemmata_list']:
-        for l in j['found_lemmata']:
-            print l['lemma'] + ' - ' + l['pos'] + ', ',
+        print ', '.join([x['lemma'] + ' - ' + x['pos'] for x in j['found_lemmata']])
 
 
 def find_wordform(lemma):
