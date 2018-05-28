@@ -3,7 +3,7 @@
 
 import requests
 
-BASE_URL = 'http://lexiconservice.inl.nl/lexicon/'
+BASE_URL = 'http://sk.taalbanknederlands.inl.nl/LexiconService/lexicon/'
 LEMMA_URL = 'get_lemma'
 WORDFORM_URL = 'get_wordforms'
 EXPAND_URL = 'expand'

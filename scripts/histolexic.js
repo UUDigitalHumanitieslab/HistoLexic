@@ -48,7 +48,7 @@ function addTooltip() {
 				
 				// Try fetching the data from the INL LexiconService with an AJAX request
 				$.ajax({
-					url: 'http://lexiconservice.inl.nl/lexicon/get_lemma',
+					url: 'http://sk.taalbanknederlands.inl.nl/LexiconService/lexicon/get_lemma',
 					dataType: 'json',
 					data: {
 						database: 'lexicon_service_db',
